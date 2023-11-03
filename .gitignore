@@ -6,6 +6,7 @@
 
 # but not this
 !.gitignore
+!.gitattributes
 ![Pp]rojectSettings
 ![Pp]ackages
 ![Aa]ssets
