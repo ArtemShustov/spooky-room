@@ -2,9 +2,10 @@
 using UnityEngine;
 
 namespace Game.Shooting {
-	public class Shooter: MonoBehaviour { // M & C
-		[SerializeField] private ShooterView _view;
+	public class Shooter: MonoBehaviour {
 		[SerializeField] private Transform _point;
+
+		public event Action Shooted;
 
 		private void Update() {
 			if (_point == null) {
@@ -23,7 +24,7 @@ namespace Game.Shooting {
 					target.Death();
 				}
 			}
-			_view.Shoot();
+			Shooted?.Invoke();
 		}
 	}
 }

@@ -4,15 +4,15 @@ using UnityEngine;
 namespace Game.Stats.Spooky {
 	public class SpookyScale: MonoBehaviour {
 		[SerializeField] private int _maxValue = 10;
-		[SerializeField] private SpookyScaleView _view;
 
 		private int _value;
 		public int Value => _value;
 
 		public event Action Overflowed;
+		public event Action<float> Changed;
 
 		private void Start() {
-			_view.Change(0);
+			Changed?.Invoke(0);
 		}
 
 		public void Increase() {
@@ -21,11 +21,11 @@ namespace Game.Stats.Spooky {
 				_value = _maxValue;
 				Overflowed?.Invoke();
 			}
-			_view.Change((float)_value / _maxValue);
+			Changed?.Invoke((float)_value / _maxValue);
 		}
 		public void Decrease() {
 			_value--;
-			_view.Change((float)_value / _maxValue);
+			Changed?.Invoke((float)_value / _maxValue);
 		}
 	}
 }

@@ -3482,7 +3482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b056fdca33ae644833beb284401269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultResolution: {x: 1920, y: 1080}
+  _defaultResolution: {x: 1920, y: 1008}
   _minVerticalSize: 5
   _camera: {fileID: 519420031}
 --- !u!1 &544919061
@@ -3985,6 +3985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slider: {fileID: 768286898}
+  _spookyScale: {fileID: 1375110461}
 --- !u!1 &749030509
 GameObject:
   m_ObjectHideFlags: 0
@@ -4238,6 +4239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e4c15aaaf93ddd46a888ef6f2bb089a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _shooter: {fileID: 784150224}
   _shootSound: {fileID: 8300000, guid: 4e155600acdb5aa41b4aa21c9c2833ba, type: 3}
   _audioSource: {fileID: 784150225}
 --- !u!114 &784150224
@@ -4252,7 +4254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72f1ce259f11f2a479cc6535c67aa3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _view: {fileID: 784150223}
   _point: {fileID: 784150221}
 --- !u!82 &784150225
 AudioSource:
@@ -4998,7 +4999,7 @@ GameObject:
   - component: {fileID: 1375110462}
   - component: {fileID: 1375110461}
   m_Layer: 0
-  m_Name: SpoolyScale
+  m_Name: SpookyScale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5017,7 +5018,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxValue: 10
-  _view: {fileID: 721923984}
 --- !u!4 &1375110462
 Transform:
   m_ObjectHideFlags: 0

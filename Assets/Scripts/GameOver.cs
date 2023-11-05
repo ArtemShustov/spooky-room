@@ -10,7 +10,7 @@ namespace Game {
 		[SerializeField] private GameObject _ui;
 		[SerializeField] private PlaySound _loseSound;
 		
-		public void Play() {
+		public void Execute() {
 			_spawners.StopSpawn();
 			_shooter.enabled = false;
 			_ui.SetActive(true);
@@ -18,10 +18,10 @@ namespace Game {
 		}
 
 		private void OnEnable() {
-			_spookyScale.Overflowed += Play;
+			_spookyScale.Overflowed += Execute;
 		}
 		private void OnDisable() {
-			_spookyScale.Overflowed -= Play;
+			_spookyScale.Overflowed -= Execute;
 		}
 	}
 }
